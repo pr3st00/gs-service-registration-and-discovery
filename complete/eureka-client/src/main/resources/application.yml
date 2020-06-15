@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${server}:8761/eureka/
+      defaultZone: http://${server}:${port}/eureka/
   instance:
     hostname: ${server}
     nonSecurePort: 80
