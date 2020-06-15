@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://notebook-fer:8761/eureka/
+      defaultZone: http://${server}:8761/eureka/
   instance:
-    hostname: notebook-fer
+    hostname: ${server}
     nonSecurePort: 80
