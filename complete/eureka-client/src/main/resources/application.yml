@@ -4,4 +4,4 @@ eureka:
       defaultZone: http://${eureka.server}:${eureka.port}/eureka/
   instance:
     hostname: ${client.hostname}
-    nonSecurePort: ${client.port}
+    nonSecurePort: 80
