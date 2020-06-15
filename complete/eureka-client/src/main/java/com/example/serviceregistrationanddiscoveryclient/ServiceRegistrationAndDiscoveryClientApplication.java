@@ -28,8 +28,12 @@ class ServiceInstanceRestController {
 	private DiscoveryClient discoveryClient;
 
 	@RequestMapping("/service-instances/{applicationName}")
-	public List<ServiceInstance> serviceInstancesByApplicationName(
-			@PathVariable String applicationName) {
+	public List<ServiceInstance> serviceInstancesByApplicationName(@PathVariable String applicationName) {
 		return this.discoveryClient.getInstances(applicationName);
+	}
+
+	@RequestMapping("/sayhello/{name}")
+	public HelloMessage sayHello(@PathVariable String name) {
+		return new HelloMessage(name);
 	}
 }
